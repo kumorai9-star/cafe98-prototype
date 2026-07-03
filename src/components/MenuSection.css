@@ -1,0 +1,127 @@
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.tab-btn {
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: 1px solid var(--cream);
+  background: var(--white);
+  color: var(--dark-brown);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.tab-btn.active, .tab-btn:hover {
+  background: var(--coffee);
+  color: var(--white);
+  border-color: var(--coffee);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.menu-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  transition: var(--transition);
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(44,26,12,0.1);
+}
+
+.card-img-wrapper {
+  position: relative;
+  height: 200px;
+  width: 100%;
+}
+
+.card-img-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu-category-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--glass);
+  backdrop-filter: blur(5px);
+  color: var(--white);
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  border-radius: 20px;
+}
+
+.menu-card-body {
+  padding: 25px;
+}
+
+.card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card-title-row h3 {
+  font-size: 1.25rem;
+  color: var(--dark-brown);
+}
+
+.price-tag {
+  font-weight: 700;
+  color: var(--coffee);
+  font-size: 1.1rem;
+}
+
+.item-description {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  
+  /* Fallback layout compatible with all strict modern parsers */
+  height: 2.9rem; 
+  overflow: hidden;
+  display: block;
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.status-badge.instock { color: #2e7d32; }
+.status-badge.out { color: #c62828; }
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--coffee);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
