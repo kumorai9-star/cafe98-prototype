@@ -18,7 +18,7 @@ const ReservationForm = ({ notify }) => {
     try {
       await createReservation(formData);
       notify('Table Booked! Looking forward to your visit.', 'success');
-      setFormData({ customerName: '', email: '', phone: '', date: '', time: '', guests: 1, specialRequest: '' });
+      setFormData({ customerName: '', email: '', phone: '', date: '', time: '', guests: 2, specialRequest: '' });
     } catch (err) {
       notify(err.response?.data?.message || 'Booking fault occurred.', 'error');
     } finally {
